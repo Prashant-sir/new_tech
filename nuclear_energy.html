@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuclear Energy: Advantages and Disadvantages</title>
+    <!-- <link rel="stylesheet" href="nuclear.css"> -->
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            padding-top: 100px; /* Add top padding to prevent content from being overlapped by sticky navbar */
+        }
+        h1, h2 {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        /* Sticky Header & Navigation */
+        header {
+            top: 0;
+            z-index: 1000;
+            background-color: #16a085;
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            flex-grow: 1;
+        }
+
+        .back-button {
+            background-color: #e74c3c;
+            border: none;
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Sticky Navigation Menu */
+        .navigator {
+            position: sticky;
+            top:2px; /* Keep a small gap from the top */
+            background-color: #2c3e50;
+            padding: 5px;
+            z-index: 999;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigator ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navigator li {
+            margin: 0 15px;
+        }
+
+        .navigator a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .navigator a:hover {
+            color: #16a085;
+        }
+
+        .navigator a.active {
+            color: #16a085;
+            font-weight: bold;
+        }
+
+        /* Section Styles */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Accordion Style */
+        .accordion {
+            background-color: #ecf0f1;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            width: 100%;
+            text-align: left;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion:hover {
+            background-color: #bdc3c7;
+        }
+
+        .active, .accordion:hover {
+            background-color: #16a085;
+            color: white;
+        }
+
+        .panel {
+            padding: 0 15px;
+            background-color: #f9f9f9;
+            display: none;
+            overflow: hidden;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        /* Button and Link Styles */
+        a, button {
+            cursor: pointer;
+        }
+
+        /* Future Container */
+        .future_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .future_container img {
+            max-width: 45%;
+            border-radius: 10px;
+        }
+
+        .future_container div {
+            max-width: 50%;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .future_container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .future_container img {
+                max-width: 90%;
+            }
+
+            /* Make the back button smaller on mobile */
+            .back-button {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nuclear Energy: Advantages and Disadvantages</h1>
+</header>
+
+<div class="navigator">
+    <ul>
+        <li><button class="back-button" onclick="goBack()">Go Back</button></li>
+        <li><a href="#what-is-nuclear" class="nav-link">What is Nuclear Energy?</a></li>
+        <li><a href="#advantages" class="nav-link">Advantages</a></li>
+        <li><a href="#disadvantages" class="nav-link">Disadvantages</a></li>
+        <li><a href="#future" class="nav-link">The Future</a></li>
+    </ul>
+</div>
+
+<div class="container">
+    <section class="section" id="what-is-nuclear">
+        <h2 style="text-align: center;font-size: 32px;"><strong>What is Nuclear Energy?</strong></h2>
+        <p style="font-size:18px;">Nuclear energy is the energy released during nuclear fission or fusion, especially when used to generate electricity. 
+            It is a powerful source of energy and plays a crucial role in the energy mix of many countries.</p>
+        <img src="https://quickelectricity.com/wp-content/uploads/2022/08/How-Does-a-Nuclear-Power-Plant-Work_-Infographic-scaled-e1661865902653-845x684.jpg" alt="Nuclear Power Plant">
+    </section>
+
+    <section class="section" id="advantages">
+        <h2 style="text-align: center;font-size: 32px;"><strong>Advantages of Nuclear Energy</strong></h2>
+        <button class="accordion">Click to See Advantages</button>
+        <div class="panel">
+            <ul style="font-size: 18px;">
+                <li><strong>Low Greenhouse Gas Emissions:</strong> Nuclear energy production results in minimal greenhouse gas emissions compared to fossil fuels, making it a cleaner energy source.</li>
+                <li><strong>High Power Output:</strong> Nuclear energy can produce a large amount of energy from a small amount of fuel, ensuring reliable power generation.</li>
+                <li><strong>Efficient Land Use:</strong> Nuclear plants require less land area compared to other power plants such as solar or wind farms.</li>
+                <li><strong>Energy Security:</strong> Nuclear energy reduces dependency on fossil fuels and improves energy security for countries.</li>
+            </ul>
+        </div>
+        <img src="https://i.pinimg.com/originals/7b/e7/73/7be77339375716c699bdfbc670309a7b.png" alt="Advantages of Nuclear Energy">
+    </section>
+
+    <section class="section" id="disadvantages">
+        <h2 style="text-align: center;font-size: 32px;"><strong>Disadvantages of Nuclear Energy</strong></h2>
+        <button class="accordion">Click to See Disadvantages</button>
+        <div class="panel">
+            <ul style="font-size:18px;">
+                <li><strong>Radioactive Waste:</strong> Nuclear plants produce radioactive waste that remains hazardous for thousands of years and requires careful storage and management.</li>
+                <li><strong>Risk of Accidents:</strong> Accidents in nuclear plants can have catastrophic consequences, as seen in Chernobyl and Fukushima disasters.</li>
+                <li><strong>High Initial Costs:</strong> Building a nuclear power plant requires substantial investment and long-term financial commitment.</li>
+                <li><strong>Limited Fuel Supply:</strong> Uranium, the fuel used in nuclear energy, is finite and requires complex extraction and refining processes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section" id="future">
+        <h2 style="text-align: center;font-size: 32px;"><strong>The Future of Nuclear Energy</strong></h2>
+        <div class="future_container">
+            <div>
+                <p style="font-size: 26px;">The future of nuclear energy is evolving with advancements in technology aimed at making it safer,
+                    cleaner, and more efficient. Innovations such as small modular reactors (SMRs) 
+                    and thorium-based reactors are emerging as potential game-changers.
+                    These technologies aim to reduce radioactive waste and improve safety measures,
+                    making nuclear energy a more viable long-term option in the transition towards sustainable energy.</p>
+            </div>
+            <img src="https://pbs.twimg.com/media/FyuDe28XgAEKtpi.jpg" alt="Future of Nuclear Energy">
+        </div>
+    </section>
+
+</div>
+
+<script>
+    // Function to go back to previous page
+    function goBack() {
+        window.history.back();
+    }
+
+    // Accordion Functionality
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+
+    // Smooth scrolling for navigation
+    const links = document.querySelectorAll('.nav-link');
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').slice(1);
+            document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+</script>
+
+</body>
+</html>
